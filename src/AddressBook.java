@@ -1,47 +1,32 @@
-    public class AddressBook {
-        private String name;
-        private String postalAddress;
-        private String phone;
+import java.util.ArrayList;
+import java.util.List;
 
-        public AddressBook(String name, String postalAddress, String phone){
-            this.name = name;
-            this.postalAddress = postalAddress;
-            this.phone = phone;
+public class AddressBook {
+	/*
+	public String getAll(){
+		return ""+this.name +""+ this.postalAddress +""+ this.phone;
         }
-     
-        public String getpostalAddress() {
-            return postalAddress;
-        }
-     
-        public void setpostalAddress(String postalAddress) {
-            this.postalAddress = postalAddress;
-        }
-     
-        public String getphone() {
-            return phone;
-        }
-     
-        public void setphone(String phone) {
-            this.phone = phone;
-        }
-     
-        public String getName() {
-            return name;
-        }
-     
-        public void setName(String name) {
-            this.name = name;
-        }
-     
-         public String getAll(){
-            return ""+this.name +""+ this.postalAddress +""+ this.phone;
-        }
-     
-        @Override
-        public String toString() {
-            return "Man [name=" + name + ", postalAddress=" + postalAddress + ", phone=" + phone + "]";
-        }
-     
-        
-        
-    }
+     */
+	private List<Entry> records;
+	
+	public AddressBook(){
+		this.records = new ArrayList<Entry>();
+	}	
+	
+	public AddressBook(Entry [] records){
+		this.records = new ArrayList<Entry>();
+		for (Entry i : records){
+			this.records.add(i);
+		}
+	}
+	
+	public void addEntry(Entry entry){
+		this.records.add(entry);
+	}
+	
+	public Entry search(String name){
+		// TODO
+		Entry result = new Entry();
+		return result;
+	}
+}
