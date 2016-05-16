@@ -25,8 +25,11 @@ public class AddressBook {
 	}
 	
 	public Entry search(String name){
-		// TODO
-		Entry result = new Entry();
-		return result;
+		for (Entry i : records){
+			//String comparsion 
+			if (i.getName() == name)
+				return i;
+		}
+			return null;
 	}
 }

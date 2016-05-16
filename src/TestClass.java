@@ -29,23 +29,11 @@ public class TestClass {
     	System.out.println("Enter phone for contact: ");
     	String phone = input.nextLine();  
     
-    	
+    	Entry record = new Entry(name, postalAddress, phone);
+    	myBook.addEntry(record);
     	
     	System.out.println("New record saved to Address book.");
     	System.out.println("What would you like to do next?");
-}
-
-    public static void searchName() {
-    	System.out.println("Enter the name of contact you want to find: ");
-    	String search = input.next();
-    		if (search.equals(information.get(0))) {
-                System.out.println(information);
-                System.out.println("What would you like to do next?");
-                firstActions();
-    		}
-    		else {
-    			System.out.println("There is no such record in AddressBook. Please try again.");
-    			firstActions();
-    		}
 	}
+
 }
