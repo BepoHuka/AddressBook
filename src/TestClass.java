@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class BookActions {
+public class TestClass {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class BookActions {
 		System.out.print("Enter Phone number for " + inputString + ":");
 		inputString = sc.nextLine();
 		   
-		while (!inputString.matches("^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$")) {    	
+		while (!inputString.matches("^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$")) {    	
 			//This expression matches for all valid in Russia numbers
 			System.out.print("Incorrect input. Phone number could contain only numbers, dashes and brackets: ");
 			inputString = sc.nextLine();

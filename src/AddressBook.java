@@ -1,36 +1,47 @@
+    public class AddressBook {
+        private String name;
+        private String postalAddress;
+        private String phone;
 
-public class AddressBook {
-	String name;
-	String address;
-	String phoneNumber;
-	
-
-public AddressBook(String name, String address, String phoneNumber){
-   	this.name = name;        	
-    this.address = address;
-    this.phoneNumber = phoneNumber;        	
-    }        
-
-public String toString(){
-    String result;
-    result = "Record parametres: ";
-    result += "name - " + name + ", ";
-    result += "address - " + address + ", ";
-    result += "phoneNumber - " + phoneNumber;
-    return result;
-}
-
-public String getName() {
-    return name;
-}
-
-public String getAddress() {	
-    return address;
-}
-
-public String getphoneNumber() {
-    return phoneNumber;
-}
-
-
-}
+        public AddressBook(String name, String postalAddress, String phone){
+            this.name = name;
+            this.postalAddress = postalAddress;
+            this.phone = phone;
+        }
+     
+        public String getpostalAddress() {
+            return postalAddress;
+        }
+     
+        public void setpostalAddress(String postalAddress) {
+            this.postalAddress = postalAddress;
+        }
+     
+        public String getphone() {
+            return phone;
+        }
+     
+        public void setphone(String phone) {
+            this.phone = phone;
+        }
+     
+        public String getName() {
+            return name;
+        }
+     
+        public void setName(String name) {
+            this.name = name;
+        }
+     
+         public String getAll(){
+            return ""+this.name +""+ this.postalAddress +""+ this.phone;
+        }
+     
+        @Override
+        public String toString() {
+            return "Man [name=" + name + ", postalAddress=" + postalAddress + ", phone=" + phone + "]";
+        }
+     
+        
+        
+    }
