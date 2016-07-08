@@ -1,59 +1,47 @@
 
-public class Entry {
-    private String name;
-    private String postalAddress;
-    private String phone;
+public interface Entry {
+	
+	/**
+	 * Get Person for current Entry
+	 * 
+	 * @return a Person object for current Entry
+	 * 
+	 */
+	public Name getName();
+	
+	/**
+	 * Get Address for current Entry
+	 * 
+	 * @return a Address object for current Entry
+	 */
+	public Address getAddress();
+		
+	/**
+	 * Get PhoneNumber for current Entry
+	 * 
+	 * @return a PhoneNumber object for current Entry
+	 */
+	public PhoneNumber getPhoneNumber();
+	
+	/**
+	 * Set Person for current Entry
+	 * 
+	 * @param person a Person to set
+	 */
+	public void setName(Name person);
     
-    public Entry(){
-        this.name = "Veronika Pasechnik";
-        this.postalAddress = "Saint-Petersburg";
-        this.phone = "1234567";
-    }
-    
-    public Entry(String name, String postalAddress, String phone){
-        this.name = name;
-        this.postalAddress = postalAddress;
-        this.phone = phone;
-    }
-    
-    public String getPostalAddress() {
-        return postalAddress;
-    }
- 
-    public void setPostalAddress(String postalAddress) {
-        this.postalAddress = postalAddress;
-    }
- 
-    public String getPhone() {
-        return phone;
-    }
- 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
- 
-    public String getName() {
-        return name;
-    }
- 
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public void printPostalAddress() {
-    	System.out.println(this.postalAddress);
-    }
-    
-    public void printPhone() {
-    	System.out.println(this.phone);
-    }
-    
-    public void printName() {
-    	System.out.println(this.name);
-    }
-    
-    @Override
-    public String toString() {
-        return "Entry [name=" + name + ", postalAddress=" + postalAddress + ", phone=" + phone + "]";
-    }
+	/**
+	 * Set Address for current Entry
+	 * 
+	 * @param address a Address to set
+	 */
+	public void setAddress(Address address);
+	
+	/**
+	 * Set PhoneNumber for current Entry
+	 * 
+	 * @param phoneNumber a PhoneNumber to set
+	 */
+	public void  setPhoneNumber(PhoneNumber phoneNumber);
+	
 }
